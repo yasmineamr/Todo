@@ -10,37 +10,37 @@ import UIKit
 //import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if (error == nil)
-        {
-            // Perform any operations on signed in user here.
-            let userId = user.userID // For client-side use only!
-            let idToken = user.authentication.idToken //Safe to send to the server
-            let name = user.profile.name
-            let email = user.profile.email
-            //        let userImageURL = user.profile.imageURLWithDimension(200)
-            // ...
-            print("---------------------------------")
-            print(user.authentication.refreshToken)
-            //            print(user.authentication)
-            //            dump(user)
-            print("---------------------------------")
-        }
-        else
-        {
-            print("\(error.localizedDescription)")
-        }
-    }
+//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+//        if (error == nil)
+//        {
+//            // Perform any operations on signed in user here.
+//            let userId = user.userID // For client-side use only!
+//            let idToken = user.authentication.idToken //Safe to send to the server
+//            let name = user.profile.name
+//            let email = user.profile.email
+//            let userImageURL = user.profile.imageURL(withDimension: 200)
+//            // ...
+//            print("---------------------------------")
+//            print(user.authentication.accessToken)
+//            //            print(user.authentication)
+//            //            dump(user)
+//            print("---------------------------------")
+//        }
+//        else
+//        {
+//            print("\(error.localizedDescription)")
+//        }
+//    }
     
     
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Initialize sign-in
-        GIDSignIn.sharedInstance().clientID = "349558669094-s6k8ll3co24e64j0v7avdq961ejjm84s.apps.googleusercontent.com"
-        GIDSignIn.sharedInstance().delegate = self
+//        GIDSignIn.sharedInstance().clientID = "349558669094-s6k8ll3co24e64j0v7avdq961ejjm84s.apps.googleusercontent.com"
+//        GIDSignIn.sharedInstance().delegate = self
         return true
     }
     //
@@ -81,11 +81,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     //        }
     //    }
     
-    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!,
-                withError error: NSError!)
-    {
-        // Perform any operations when the user disconnects from app here.
-    }
+//    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!,
+//                withError error: NSError!)
+//    {
+//        // Perform any operations when the user disconnects from app here.
+//    }
     
     //    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     //        // Override point for customization after application launch.
