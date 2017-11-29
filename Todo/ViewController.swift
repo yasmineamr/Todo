@@ -26,7 +26,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         {
             // /welcome
             _ = UIViewController.displaySpinner(onView: self.view)
-            let url = NSURL(string: "http://127.0.0.1:3000/welcome")!
+            let url = NSURL(string: "https://agile-forest-45689.herokuapp.com/welcome")!
             let request = NSMutableURLRequest(url: url as URL)
             request.httpMethod = "GET"
             request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
@@ -52,7 +52,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
                     do {
                         
                         let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
-                        let url = NSURL(string: "http://127.0.0.1:3000/chat")!
+                        let url = NSURL(string: "https://agile-forest-45689.herokuapp.com/chat")!
                         let request = NSMutableURLRequest(url: url as URL)
                         request.httpMethod = "POST"
                         
