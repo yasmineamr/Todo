@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E31D1ADC1FCEEA070029D8B5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E31D1ADB1FCEEA070029D8B5 /* Podfile */; };
 		E393971A1FCCA50C00AE055B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39397191FCCA50C00AE055B /* AppDelegate.swift */; };
 		E393971C1FCCA50C00AE055B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E393971B1FCCA50C00AE055B /* ViewController.swift */; };
 		E393971F1FCCA50C00AE055B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E393971D1FCCA50C00AE055B /* Main.storyboard */; };
@@ -41,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E31D1ADB1FCEEA070029D8B5 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		E39397161FCCA50C00AE055B /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39397191FCCA50C00AE055B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E393971B1FCCA50C00AE055B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 		E393970D1FCCA50C00AE055B = {
 			isa = PBXGroup;
 			children = (
-				E31D1ADB1FCEEA070029D8B5 /* Podfile */,
 				E393974B1FCCA64F00AE055B /* GoogleSignIn.bundle */,
 				E393974A1FCCA64F00AE055B /* GoogleSignIn.framework */,
 				E39397491FCCA64F00AE055B /* GoogleSignInDependencies.framework */,
@@ -274,7 +271,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E31D1ADC1FCEEA070029D8B5 /* Podfile in Resources */,
 				E39397241FCCA50C00AE055B /* LaunchScreen.storyboard in Resources */,
 				E393974E1FCCA64F00AE055B /* GoogleSignIn.bundle in Resources */,
 				E39397481FCCA5C700AE055B /* GoogleService-Info.plist in Resources */,
