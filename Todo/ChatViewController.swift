@@ -8,7 +8,7 @@ class ChatViewController: JSQMessagesViewController {
     //MARK: Properties
     
     @IBOutlet weak var welcomeMessage: UILabel!
-  @IBOutlet weak var viewButton: UIButton!
+    @IBOutlet weak var viewButton: UIButton!
     
     lazy var outgoingBubble: JSQMessagesBubbleImage = {
         return JSQMessagesBubbleImageFactory()!.outgoingMessagesBubbleImage(with: UIColor.jsq_messageBubbleBlue())
@@ -23,7 +23,7 @@ class ChatViewController: JSQMessagesViewController {
         senderId = "1234"
         senderDisplayName = "Yasmine"
         
-        inputToolbar.contentView.leftBarButtonItem = nil //hides the attachment button on the left of the chat text input field
+        self.inputToolbar.contentView.leftBarButtonItem = nil //hides the attachment button on the left of the chat text input field
         
         // set the avatar size to zero and hiding it
         collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
@@ -81,6 +81,10 @@ class ChatViewController: JSQMessagesViewController {
             self.finishReceivingMessage()
         }
         finishSendingMessage()
+    }
+    
+    override class func nib() -> UINib! {
+        return UINib(nibName: String(describing: self), bundle: nil)
     }
     
     

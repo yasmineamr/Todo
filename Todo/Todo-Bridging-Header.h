@@ -6,3 +6,9 @@
 #import <GoogleSignIn/GoogleSignIn.h>
 #import <JSQMessagesViewController/JSQMessages.h>
 
+@interface JSQMessagesViewController (Private)
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *toolbarHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *toolbarBottomLayoutGuide;
+
+@end
