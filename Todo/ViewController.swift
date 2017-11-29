@@ -1,22 +1,16 @@
-//
-//  ViewController.swift
-//  Todo
-//
-//  Created by Yasmine Amr on 11/27/17.
-//  Copyright © 2017 Yasmine Amr. All rights reserved.
-//
-
 import UIKit
+
+var uuid: String = ""
+var welcome: String = ""
 
 class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
 
     @IBOutlet weak var signInButton: GIDSignInButton!
     
-    var uuid: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
         let objObjectiveCFile = Todo()
         objObjectiveCFile.displayMessageFromCreatedObjectiveCFile()
         
@@ -30,54 +24,30 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if (error == nil)
         {
-            // Perform any operations on signed in user here.
-            let userId = user.userID // For client-side use only!
-            let idToken = user.authentication.idToken //Safe to send to the server
-            let name = user.profile.name
-            let email = user.profile.email
-            let userImageURL = user.profile.imageURL(withDimension: 200)
-            // ...
-            print("---------------------------------")
-            print(user.authentication.accessToken)
-            print(user.authentication.idToken)
-            print(user.authentication.accessTokenExpirationDate)
-            //            print(user.authentication)
-            //            dump(user)
-            print("---------------------------------")
-            
             // /welcome
+            _ = UIViewController.displaySpinner(onView: self.view)
             let url = NSURL(string: "http://127.0.0.1:3000/welcome")!
             let request = NSMutableURLRequest(url: url as URL)
             request.httpMethod = "GET"
             request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
 
-            let task1 = URLSession.shared.dataTask(with: request as URLRequest){ data, response, error in
+            let welcometask = URLSession.shared.dataTask(with: request as URLRequest){ data, response, error in
                 if error != nil {
-                    print("Error! -> \(error)")
+                    print("Error! -> \(String(describing: error))")
                     return
                 }
                 do {
                     let result = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String:AnyObject]
-                    print("Result -> \(result)")
-                    self.uuid = (result!["uuid"] as? String)!
-                    print(self.uuid)
+                    uuid = (result!["uuid"] as? String)!
                     
                     // /chat token:
-                    let token = (user.authentication.accessToken as? String)!
-                    let refreshtoken = (user.authentication.refreshToken as? String)!
-//                    let date = (user.authentication.accessTokenExpirationDate as? String)!
-                    
-                    let myDate = "2016-06-20T13:01:46.457+02:00"
+                    let token = (user.authentication.accessToken)!
+                    let refreshtoken = (user.authentication.refreshToken)!
                     let dateFormatter = DateFormatter()
                     dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssXXX"
-//                    let date = dateFormatter.dateFromString(myDate)!
-//                    dateFormatter.dateFormat = "dd/MM/yyyy"
                     let dateString = dateFormatter.string(from: user.authentication.accessTokenExpirationDate)
-                    print("DATE")
-                    print(dateString)
-                    var message = "token: \(token) \(refreshtoken) \(dateString)"
+                    let message = "token: \(token) \(refreshtoken) \(dateString)"
 
-                    //       message += String(describing: token)
                     let json = ["message": message]
                     do {
                         
@@ -87,40 +57,34 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
                         request.httpMethod = "POST"
                         
                         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-                        request.setValue(self.uuid, forHTTPHeaderField: "Authorization")
+                        request.setValue(uuid, forHTTPHeaderField: "Authorization")
                         request.httpBody = jsonData
                         
-                        
-                        
                         let task = URLSession.shared.dataTask(with: request as URLRequest){ data, response, error in
-                            if error != nil{
-                                print("Error! -> \(error)")
+                            if error != nil {
+                                print("Error! -> \(String(describing: error))")
                                 return
                             }
                             do {
                                 let result = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String:AnyObject]
-                                print("Result -> \(result)")
-                                
+                                print("Result -> \(String(describing: result))")
+                                welcome = (result!["message"] as? String)!
+                                DispatchQueue.main.async(){
+                                self.performSegue(withIdentifier: "segue", sender: self);
+                                }
                             } catch {
                                 print("Error -> \(error)")
                             }
                         }
-                        
                         task.resume()
                     } catch {
                         print(error)
                     }
-
-
                 } catch {
                     print("Error -> \(error)")
                 }
             }
-
-            task1.resume()
-            
-            
-
+            welcometask.resume()
         }
         else
         {
@@ -128,8 +92,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         }
     }
     
-    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!,
-                withError error: NSError!)
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user:GIDGoogleUser!,
+                withError error: Error!)
     {
         // Perform any operations when the user disconnects from app here.
     }
@@ -139,4 +103,28 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         // Dispose of any resources that can be recreated.
     }
 }
+
+extension UIViewController {
+    class func displaySpinner(onView : UIView) -> UIView {
+        let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
+        ai.startAnimating()
+        ai.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            onView.addSubview(spinnerView)
+        }
+        
+        return spinnerView
+    }
+    
+    class func removeSpinner(spinner :UIView) {
+        DispatchQueue.main.async {
+            spinner.removeFromSuperview()
+        }
+    }
+}
+
 
