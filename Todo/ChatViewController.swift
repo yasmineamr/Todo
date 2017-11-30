@@ -1,9 +1,9 @@
 import UIKit
 import JSQMessagesViewController
 
-
+var messages = [JSQMessage]()
 class ChatViewController: JSQMessagesViewController {
-    var messages = [JSQMessage]()
+    
 
     //MARK: Properties
     
@@ -33,7 +33,7 @@ class ChatViewController: JSQMessagesViewController {
         
         if let message = JSQMessage(senderId: "1", displayName: "Todo", text: welcome)
         {
-            self.messages.append(message)
+            messages.append(message)
             
             self.finishReceivingMessage()
         }
@@ -76,11 +76,97 @@ class ChatViewController: JSQMessagesViewController {
     {
         if let message = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)
         {
-            self.messages.append(message)
+            messages.append(message)
             
             self.finishReceivingMessage()
+            finishSendingMessage()
+            
+            if completeFlag == 1{
+                print("in complete flag")
+                
+                let json = ["message": "completed: "+text]
+                do {
+                    
+                    let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+                    let url = NSURL(string: "https://agile-forest-45689.herokuapp.com/chat")!
+                    let request = NSMutableURLRequest(url: url as URL)
+                    request.httpMethod = "POST"
+                    
+                    request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+                    request.setValue(uuid, forHTTPHeaderField: "Authorization")
+                    request.httpBody = jsonData
+                    
+                    let task = URLSession.shared.dataTask(with: request as URLRequest){ data, response, error in
+                        if error != nil {
+                            print("Error! -> \(String(describing: error))")
+                            return
+                        }
+                        do {
+                            let result = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String:AnyObject]
+                            
+                            let text = (result!["message"] as? String)!
+                            print(text)
+                            if let message = JSQMessage(senderId: "12", displayName: "Habiiba", text: text)
+                            {
+                                messages.append(message)
+                                self.finishReceivingMessage()
+                            }
+                            self.finishSendingMessage()
+                            
+                        } catch {
+                            print("Error -> \(error)")
+                        }
+                    }
+                    task.resume()
+                } catch {
+                    print(error)
+                }
+                completeFlag = 0
+            }
+            if deleteFlag == 1{
+                print("in delete flag")
+                
+                let json = ["message": "delete: "+text]
+                do {
+                    
+                    let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+                    let url = NSURL(string: "https://agile-forest-45689.herokuapp.com/chat")!
+                    let request = NSMutableURLRequest(url: url as URL)
+                    request.httpMethod = "POST"
+                    
+                    request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+                    request.setValue(uuid, forHTTPHeaderField: "Authorization")
+                    request.httpBody = jsonData
+                    
+                    let task = URLSession.shared.dataTask(with: request as URLRequest){ data, response, error in
+                        if error != nil {
+                            print("Error! -> \(String(describing: error))")
+                            return
+                        }
+                        do {
+                            let result = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String:AnyObject]
+                            
+                            let text = (result!["message"] as? String)!
+                            print(text)
+                            if let message = JSQMessage(senderId: "12", displayName: "Habiiba", text: text)
+                            {
+                                messages.append(message)
+                                self.finishReceivingMessage()
+                            }
+                            self.finishSendingMessage()
+                            
+                        } catch {
+                            print("Error -> \(error)")
+                        }
+                    }
+                    task.resume()
+                } catch {
+                    print(error)
+                }
+                deleteFlag = 0
+            }
         }
-        finishSendingMessage()
+        // finishSendingMessage()
     }
     
     override class func nib() -> UINib! {
