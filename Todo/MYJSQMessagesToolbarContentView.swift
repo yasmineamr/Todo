@@ -15,6 +15,16 @@ class MYJSQMessagesToolbarContentView: JSQMessagesToolbarContentView {
     
     @IBAction func habiibasAction(_ sender: Any) {
         print("Nourhaan")
+//        didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!)
+//        if let message = JSQMessage(senderId: "1", displayName: "Todo", text: "welcome wala eh")
+//        {
+//            messages.append(message)
+//
+//            JSQMessagesViewController().finishReceivingMessage()
+//        }
+//        JSQMessagesViewController().finishSendingMessage()
+        
+        ChatViewController().receiveMessage(passMessage: "message.stringValue")
     }
     
 }

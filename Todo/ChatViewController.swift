@@ -1,9 +1,10 @@
 import UIKit
 import JSQMessagesViewController
 
+var messages = [JSQMessage]()
 
 class ChatViewController: JSQMessagesViewController {
-    var messages = [JSQMessage]()
+
 
     //MARK: Properties
     
@@ -29,11 +30,14 @@ class ChatViewController: JSQMessagesViewController {
         collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
+        self.collectionView?.reloadData()
+        self.collectionView?.layoutIfNeeded()
+        
         // Do any additional setup after loading the view.
         
         if let message = JSQMessage(senderId: "1", displayName: "Todo", text: welcome)
         {
-            self.messages.append(message)
+            messages.append(message)
             
             self.finishReceivingMessage()
         }
@@ -76,11 +80,27 @@ class ChatViewController: JSQMessagesViewController {
     {
         if let message = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)
         {
-            self.messages.append(message)
+            messages.append(message)
             
             self.finishReceivingMessage()
         }
         finishSendingMessage()
+    }
+    
+    func receiveMessage(passMessage: String!) {
+        print("!!!")
+        if let message = JSQMessage(senderId: "1", displayName: "Todo", text: passMessage)
+        {
+            messages.append(message)
+            
+            self.finishReceivingMessage()
+        }
+        finishSendingMessage()
+    }
+    
+    func makeConversation() -> [JSQMessage] {
+        // This is just for demo purposes, if you add more messages to this array they will appear in your conversation feed.
+        return [JSQMessage(senderId: "053496-4509-288", displayName: "Dan leonard", text: "Check out this awesome library called JSQMessagesViewController")]
     }
     
     override class func nib() -> UINib! {
