@@ -4,7 +4,7 @@ import JSQMessagesViewController
 var messages = [JSQMessage]()
 class ChatViewController: JSQMessagesViewController {
     
-
+    
     //MARK: Properties
     
     @IBOutlet weak var welcomeMessage: UILabel!
@@ -20,8 +20,8 @@ class ChatViewController: JSQMessagesViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        senderId = "1234"
-        senderDisplayName = "Yasmine"
+        senderId = "22"
+        senderDisplayName = "Habiiba"
         
         self.inputToolbar.contentView.leftBarButtonItem = nil //hides the attachment button on the left of the chat text input field
         
@@ -63,13 +63,39 @@ class ChatViewController: JSQMessagesViewController {
     //is called when the label text is needed
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAt indexPath: IndexPath!) -> NSAttributedString!
     {
-        return messages[indexPath.item].senderId == senderId ? nil : NSAttributedString(string: messages[indexPath.item].senderDisplayName)
+        print(senderId)
+        
+        let message = messages[indexPath.item]
+        print(message.senderId)
+        print(message.senderDisplayName)
+        if message.senderId == senderId {
+            return nil
+        } else {
+            guard let senderDisplayName = message.senderDisplayName else {
+                assertionFailure()
+                return nil
+            }
+            return NSAttributedString(string: senderDisplayName)
+            
+        }
+        
+        //return messages[indexPath.item].senderId == senderId ? nil : NSAttributedString(string: messages[indexPath.item].senderDisplayName)
     }
     
     //is called when the height of the top label is needed
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) -> CGFloat
     {
-        return messages[indexPath.item].senderId == senderId ? 0 : 15
+        let message = messages[indexPath.item]
+        
+        if message.senderId == senderId {
+            return 0.0
+        } else {
+            
+            return 17.0
+            
+        }
+        
+        //return messages[indexPath.item].senderId == senderId ? 0 : 15
     }
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!)
@@ -106,7 +132,7 @@ class ChatViewController: JSQMessagesViewController {
                             
                             let text = (result!["message"] as? String)!
                             print(text)
-                            if let message = JSQMessage(senderId: "12", displayName: "Habiiba", text: text)
+                            if let message = JSQMessage(senderId: "1", displayName: "Todo", text: text)
                             {
                                 messages.append(message)
                                 self.finishReceivingMessage()
@@ -148,7 +174,7 @@ class ChatViewController: JSQMessagesViewController {
                             
                             let text = (result!["message"] as? String)!
                             print(text)
-                            if let message = JSQMessage(senderId: "12", displayName: "Habiiba", text: text)
+                            if let message = JSQMessage(senderId: "1", displayName: "Todo", text: text)
                             {
                                 messages.append(message)
                                 self.finishReceivingMessage()

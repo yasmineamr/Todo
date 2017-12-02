@@ -45,7 +45,7 @@ class MYJSQMessagesToolbarContentView: JSQMessagesToolbarContentView {
                     
                     let text = (result!["message"] as? String)!
                     print(text)
-                    if let message = JSQMessage(senderId: "12", displayName: "Habiiba", text: text)
+                    if let message = JSQMessage(senderId: "22", displayName: "Habiiba", text: text)
                     {
                         messages.append(message)
                     }
@@ -65,12 +65,14 @@ class MYJSQMessagesToolbarContentView: JSQMessagesToolbarContentView {
         print("in delete")
         completeFlag = 0
         deleteFlag = 1
+       
         if let message = JSQMessage(senderId: "1", displayName: "Todo", text: "Enter task number")
         {
             messages.append(message)
             
             ChatViewController().finishReceivingMessage()
         }
+        ChatViewController().finishSendingMessage()
     }
     @IBAction func completeTask(_ sender: Any) {
         print("in complete")
