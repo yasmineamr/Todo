@@ -2,6 +2,7 @@ import UIKit
 
 var uuid: String = ""
 var welcome: String = ""
+var signInFlag = 0
 
 class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
 
@@ -48,6 +49,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
                     let dateString = dateFormatter.string(from: user.authentication.accessTokenExpirationDate)
                     let message = "token: \(token) \(refreshtoken) \(dateString)"
 
+                    if(signInFlag == 0){
+                        signInFlag = 1
                     let json = ["message": message]
                     do {
                         
@@ -80,11 +83,13 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
                     } catch {
                         print(error)
                     }
+                    }
                 } catch {
                     print("Error -> \(error)")
                 }
             }
             welcometask.resume()
+            
         }
         else
         {
