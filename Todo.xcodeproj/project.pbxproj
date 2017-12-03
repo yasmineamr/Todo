@@ -7,11 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		961433AB1FD2FC6F00129317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 961433AA1FD2FC6F00129317 /* Assets.xcassets */; };
+		968FD4301FD3528F00CC7111 /* Glamor-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD4181FD3528F00CC7111 /* Glamor-Bold.otf */; };
+		968FD4311FD3528F00CC7111 /* Glamor-BoldCondensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD4191FD3528F00CC7111 /* Glamor-BoldCondensed.otf */; };
+		968FD4321FD3528F00CC7111 /* Glamor-BoldCondensedItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD41A1FD3528F00CC7111 /* Glamor-BoldCondensedItalic.otf */; };
+		968FD4331FD3528F00CC7111 /* Glamor-BoldExtended.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD41B1FD3528F00CC7111 /* Glamor-BoldExtended.otf */; };
+		968FD4341FD3528F00CC7111 /* Glamor-BoldExtendedItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD41C1FD3528F00CC7111 /* Glamor-BoldExtendedItalic.otf */; };
+		968FD4351FD3528F00CC7111 /* Glamor-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD41D1FD3528F00CC7111 /* Glamor-BoldItalic.otf */; };
+		968FD4361FD3528F00CC7111 /* Glamor-Condensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD41E1FD3528F00CC7111 /* Glamor-Condensed.otf */; };
+		968FD4371FD3528F00CC7111 /* Glamor-CondensedItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD41F1FD3528F00CC7111 /* Glamor-CondensedItalic.otf */; };
+		968FD4381FD3528F00CC7111 /* Glamor-Extended.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD4201FD3528F00CC7111 /* Glamor-Extended.otf */; };
+		968FD4391FD3528F00CC7111 /* Glamor-ExtendedItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD4211FD3528F00CC7111 /* Glamor-ExtendedItalic.otf */; };
+		968FD43A1FD3528F00CC7111 /* Glamor-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD4221FD3528F00CC7111 /* Glamor-Italic.otf */; };
+		968FD43B1FD3528F00CC7111 /* Glamor-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD4231FD3528F00CC7111 /* Glamor-Light.otf */; };
+		968FD43C1FD3528F00CC7111 /* Glamor-LightCondensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD4241FD3528F00CC7111 /* Glamor-LightCondensed.otf */; };
+		968FD43D1FD3528F00CC7111 /* Glamor-LightCondensedItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD4251FD3528F00CC7111 /* Glamor-LightCondensedItalic.otf */; };
+		968FD43E1FD3528F00CC7111 /* Glamor-LightExtended.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD4261FD3528F00CC7111 /* Glamor-LightExtended.otf */; };
+		968FD43F1FD3528F00CC7111 /* Glamor-LightExtendedItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD4271FD3528F00CC7111 /* Glamor-LightExtendedItalic.otf */; };
+		968FD4401FD3528F00CC7111 /* Glamor-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD4281FD3528F00CC7111 /* Glamor-LightItalic.otf */; };
+		968FD4411FD3528F00CC7111 /* Glamor-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD4291FD3528F00CC7111 /* Glamor-Medium.otf */; };
+		968FD4421FD3528F00CC7111 /* Glamor-MediumCondensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD42A1FD3528F00CC7111 /* Glamor-MediumCondensed.otf */; };
+		968FD4431FD3528F00CC7111 /* Glamor-MediumCondensedItali.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD42B1FD3528F00CC7111 /* Glamor-MediumCondensedItali.otf */; };
+		968FD4441FD3528F00CC7111 /* Glamor-MediumExtended.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD42C1FD3528F00CC7111 /* Glamor-MediumExtended.otf */; };
+		968FD4451FD3528F00CC7111 /* Glamor-MediumExtendedItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD42D1FD3528F00CC7111 /* Glamor-MediumExtendedItalic.otf */; };
+		968FD4461FD3528F00CC7111 /* Glamor-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD42E1FD3528F00CC7111 /* Glamor-MediumItalic.otf */; };
+		968FD4471FD3528F00CC7111 /* Glamor-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD42F1FD3528F00CC7111 /* Glamor-Regular.otf */; };
 		E3677E441FCEF1F800B936AD /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E3677E431FCEF1F800B936AD /* Podfile */; };
 		E393971A1FCCA50C00AE055B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39397191FCCA50C00AE055B /* AppDelegate.swift */; };
 		E393971C1FCCA50C00AE055B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E393971B1FCCA50C00AE055B /* ViewController.swift */; };
 		E393971F1FCCA50C00AE055B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E393971D1FCCA50C00AE055B /* Main.storyboard */; };
-		E39397211FCCA50C00AE055B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E39397201FCCA50C00AE055B /* Assets.xcassets */; };
 		E39397241FCCA50C00AE055B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39397221FCCA50C00AE055B /* LaunchScreen.storyboard */; };
 		E393972F1FCCA50C00AE055B /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E393972E1FCCA50C00AE055B /* TodoTests.swift */; };
 		E393973A1FCCA50C00AE055B /* TodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39397391FCCA50C00AE055B /* TodoUITests.swift */; };
@@ -48,6 +72,31 @@
 
 /* Begin PBXFileReference section */
 		7EE7CFE4F0DDA8A6BF593124 /* Pods-Todo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Todo/Pods-Todo.debug.xcconfig"; sourceTree = "<group>"; };
+		961433AA1FD2FC6F00129317 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		968FD4181FD3528F00CC7111 /* Glamor-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-Bold.otf"; sourceTree = "<group>"; };
+		968FD4191FD3528F00CC7111 /* Glamor-BoldCondensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-BoldCondensed.otf"; sourceTree = "<group>"; };
+		968FD41A1FD3528F00CC7111 /* Glamor-BoldCondensedItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-BoldCondensedItalic.otf"; sourceTree = "<group>"; };
+		968FD41B1FD3528F00CC7111 /* Glamor-BoldExtended.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-BoldExtended.otf"; sourceTree = "<group>"; };
+		968FD41C1FD3528F00CC7111 /* Glamor-BoldExtendedItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-BoldExtendedItalic.otf"; sourceTree = "<group>"; };
+		968FD41D1FD3528F00CC7111 /* Glamor-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-BoldItalic.otf"; sourceTree = "<group>"; };
+		968FD41E1FD3528F00CC7111 /* Glamor-Condensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-Condensed.otf"; sourceTree = "<group>"; };
+		968FD41F1FD3528F00CC7111 /* Glamor-CondensedItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-CondensedItalic.otf"; sourceTree = "<group>"; };
+		968FD4201FD3528F00CC7111 /* Glamor-Extended.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-Extended.otf"; sourceTree = "<group>"; };
+		968FD4211FD3528F00CC7111 /* Glamor-ExtendedItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-ExtendedItalic.otf"; sourceTree = "<group>"; };
+		968FD4221FD3528F00CC7111 /* Glamor-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-Italic.otf"; sourceTree = "<group>"; };
+		968FD4231FD3528F00CC7111 /* Glamor-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-Light.otf"; sourceTree = "<group>"; };
+		968FD4241FD3528F00CC7111 /* Glamor-LightCondensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-LightCondensed.otf"; sourceTree = "<group>"; };
+		968FD4251FD3528F00CC7111 /* Glamor-LightCondensedItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-LightCondensedItalic.otf"; sourceTree = "<group>"; };
+		968FD4261FD3528F00CC7111 /* Glamor-LightExtended.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-LightExtended.otf"; sourceTree = "<group>"; };
+		968FD4271FD3528F00CC7111 /* Glamor-LightExtendedItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-LightExtendedItalic.otf"; sourceTree = "<group>"; };
+		968FD4281FD3528F00CC7111 /* Glamor-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-LightItalic.otf"; sourceTree = "<group>"; };
+		968FD4291FD3528F00CC7111 /* Glamor-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-Medium.otf"; sourceTree = "<group>"; };
+		968FD42A1FD3528F00CC7111 /* Glamor-MediumCondensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-MediumCondensed.otf"; sourceTree = "<group>"; };
+		968FD42B1FD3528F00CC7111 /* Glamor-MediumCondensedItali.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-MediumCondensedItali.otf"; sourceTree = "<group>"; };
+		968FD42C1FD3528F00CC7111 /* Glamor-MediumExtended.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-MediumExtended.otf"; sourceTree = "<group>"; };
+		968FD42D1FD3528F00CC7111 /* Glamor-MediumExtendedItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-MediumExtendedItalic.otf"; sourceTree = "<group>"; };
+		968FD42E1FD3528F00CC7111 /* Glamor-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-MediumItalic.otf"; sourceTree = "<group>"; };
+		968FD42F1FD3528F00CC7111 /* Glamor-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-Regular.otf"; sourceTree = "<group>"; };
 		BCCEBD86DC76C7F5A3206D02 /* Pods-Todo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Todo/Pods-Todo.release.xcconfig"; sourceTree = "<group>"; };
 		C144BA936B9E20436542E588 /* Pods_Todo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3677E431FCEF1F800B936AD /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
@@ -55,7 +104,6 @@
 		E39397191FCCA50C00AE055B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E393971B1FCCA50C00AE055B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E393971E1FCCA50C00AE055B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E39397201FCCA50C00AE055B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E39397231FCCA50C00AE055B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E39397251FCCA50C00AE055B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E393972A1FCCA50C00AE055B /* TodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +158,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		968FD4171FD3528F00CC7111 /* Glamor - OTF */ = {
+			isa = PBXGroup;
+			children = (
+				968FD4181FD3528F00CC7111 /* Glamor-Bold.otf */,
+				968FD4191FD3528F00CC7111 /* Glamor-BoldCondensed.otf */,
+				968FD41A1FD3528F00CC7111 /* Glamor-BoldCondensedItalic.otf */,
+				968FD41B1FD3528F00CC7111 /* Glamor-BoldExtended.otf */,
+				968FD41C1FD3528F00CC7111 /* Glamor-BoldExtendedItalic.otf */,
+				968FD41D1FD3528F00CC7111 /* Glamor-BoldItalic.otf */,
+				968FD41E1FD3528F00CC7111 /* Glamor-Condensed.otf */,
+				968FD41F1FD3528F00CC7111 /* Glamor-CondensedItalic.otf */,
+				968FD4201FD3528F00CC7111 /* Glamor-Extended.otf */,
+				968FD4211FD3528F00CC7111 /* Glamor-ExtendedItalic.otf */,
+				968FD4221FD3528F00CC7111 /* Glamor-Italic.otf */,
+				968FD4231FD3528F00CC7111 /* Glamor-Light.otf */,
+				968FD4241FD3528F00CC7111 /* Glamor-LightCondensed.otf */,
+				968FD4251FD3528F00CC7111 /* Glamor-LightCondensedItalic.otf */,
+				968FD4261FD3528F00CC7111 /* Glamor-LightExtended.otf */,
+				968FD4271FD3528F00CC7111 /* Glamor-LightExtendedItalic.otf */,
+				968FD4281FD3528F00CC7111 /* Glamor-LightItalic.otf */,
+				968FD4291FD3528F00CC7111 /* Glamor-Medium.otf */,
+				968FD42A1FD3528F00CC7111 /* Glamor-MediumCondensed.otf */,
+				968FD42B1FD3528F00CC7111 /* Glamor-MediumCondensedItali.otf */,
+				968FD42C1FD3528F00CC7111 /* Glamor-MediumExtended.otf */,
+				968FD42D1FD3528F00CC7111 /* Glamor-MediumExtendedItalic.otf */,
+				968FD42E1FD3528F00CC7111 /* Glamor-MediumItalic.otf */,
+				968FD42F1FD3528F00CC7111 /* Glamor-Regular.otf */,
+			);
+			path = "Glamor - OTF";
+			sourceTree = "<group>";
+		};
 		D2FD9C46BDD2367A11E9A1A4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +228,8 @@
 		E39397181FCCA50C00AE055B /* Todo */ = {
 			isa = PBXGroup;
 			children = (
+				968FD4171FD3528F00CC7111 /* Glamor - OTF */,
+				961433AA1FD2FC6F00129317 /* Assets.xcassets */,
 				E39397191FCCA50C00AE055B /* AppDelegate.swift */,
 				E393971B1FCCA50C00AE055B /* ViewController.swift */,
 				E3A713641FCDF113007B301B /* ChatViewController.swift */,
@@ -158,7 +239,6 @@
 				E3FBCA691FCF55D700280C9C /* MYJSQMessagesToolbarContentView.xib */,
 				E3DABB4B1FCF058D00149441 /* ButtonsViewController.swift */,
 				E393971D1FCCA50C00AE055B /* Main.storyboard */,
-				E39397201FCCA50C00AE055B /* Assets.xcassets */,
 				E39397221FCCA50C00AE055B /* LaunchScreen.storyboard */,
 				E39397251FCCA50C00AE055B /* Info.plist */,
 				E39397541FCCA6CC00AE055B /* Todo.m */,
@@ -309,13 +389,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3677E441FCEF1F800B936AD /* Podfile in Resources */,
+				968FD4401FD3528F00CC7111 /* Glamor-LightItalic.otf in Resources */,
+				968FD4411FD3528F00CC7111 /* Glamor-Medium.otf in Resources */,
 				E3FBCA6C1FCF55D800280C9C /* MYJSQMessagesToolbarContentView.xib in Resources */,
 				E39397241FCCA50C00AE055B /* LaunchScreen.storyboard in Resources */,
+				968FD4301FD3528F00CC7111 /* Glamor-Bold.otf in Resources */,
 				E3FBCA671FCF505200280C9C /* ChatViewController.xib in Resources */,
 				E393974E1FCCA64F00AE055B /* GoogleSignIn.bundle in Resources */,
+				968FD43D1FD3528F00CC7111 /* Glamor-LightCondensedItalic.otf in Resources */,
+				968FD4381FD3528F00CC7111 /* Glamor-Extended.otf in Resources */,
+				968FD4471FD3528F00CC7111 /* Glamor-Regular.otf in Resources */,
+				968FD4351FD3528F00CC7111 /* Glamor-BoldItalic.otf in Resources */,
+				968FD4361FD3528F00CC7111 /* Glamor-Condensed.otf in Resources */,
+				968FD4421FD3528F00CC7111 /* Glamor-MediumCondensed.otf in Resources */,
+				968FD4311FD3528F00CC7111 /* Glamor-BoldCondensed.otf in Resources */,
+				968FD4371FD3528F00CC7111 /* Glamor-CondensedItalic.otf in Resources */,
+				968FD4321FD3528F00CC7111 /* Glamor-BoldCondensedItalic.otf in Resources */,
+				968FD4431FD3528F00CC7111 /* Glamor-MediumCondensedItali.otf in Resources */,
+				968FD4341FD3528F00CC7111 /* Glamor-BoldExtendedItalic.otf in Resources */,
 				E39397481FCCA5C700AE055B /* GoogleService-Info.plist in Resources */,
-				E39397211FCCA50C00AE055B /* Assets.xcassets in Resources */,
+				968FD43B1FD3528F00CC7111 /* Glamor-Light.otf in Resources */,
+				961433AB1FD2FC6F00129317 /* Assets.xcassets in Resources */,
 				E393971F1FCCA50C00AE055B /* Main.storyboard in Resources */,
+				968FD43A1FD3528F00CC7111 /* Glamor-Italic.otf in Resources */,
+				968FD43F1FD3528F00CC7111 /* Glamor-LightExtendedItalic.otf in Resources */,
+				968FD4461FD3528F00CC7111 /* Glamor-MediumItalic.otf in Resources */,
+				968FD43C1FD3528F00CC7111 /* Glamor-LightCondensed.otf in Resources */,
+				968FD4391FD3528F00CC7111 /* Glamor-ExtendedItalic.otf in Resources */,
+				968FD4441FD3528F00CC7111 /* Glamor-MediumExtended.otf in Resources */,
+				968FD4451FD3528F00CC7111 /* Glamor-MediumExtendedItalic.otf in Resources */,
+				968FD43E1FD3528F00CC7111 /* Glamor-LightExtended.otf in Resources */,
+				968FD4331FD3528F00CC7111 /* Glamor-BoldExtended.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,11 +482,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Todo/Pods-Todo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -579,12 +685,13 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Todo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.guc.Todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Todo/Todo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -602,11 +709,12 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Todo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.guc.Todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Todo/Todo-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
