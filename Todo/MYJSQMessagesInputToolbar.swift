@@ -8,7 +8,5 @@ class MYJSQMessagesInputToolbar: JSQMessagesInputToolbar {
         
         let nib = Bundle.main.loadNibNamed(String(describing: MYJSQMessagesToolbarContentView.self), owner: self, options: nil)
         return nib?.first as? MYJSQMessagesToolbarContentView
-        
     }
-
 }
