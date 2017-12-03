@@ -2,7 +2,7 @@ import UIKit
 import JSQMessagesViewController
 
 var messages = [JSQMessage]()
-class ChatViewController: JSQMessagesViewController {
+class ChatViewController: JSQMessagesViewController, GIDSignInUIDelegate, GIDSignInDelegate {
     
     
     //MARK: Properties
@@ -20,15 +20,17 @@ class ChatViewController: JSQMessagesViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        senderId = "22"
+        senderId = uuid
         senderDisplayName = "Habiiba"
+        
         
         self.inputToolbar.contentView.leftBarButtonItem = nil //hides the attachment button on the left of the chat text input field
         
         // set the avatar size to zero and hiding it
         collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
-        
+        topContentAdditionalInset = 50
+        self.addNavBar()
         // Do any additional setup after loading the view.
         
         if let message = JSQMessage(senderId: "1", displayName: "Todo", text: welcome)
@@ -63,39 +65,39 @@ class ChatViewController: JSQMessagesViewController {
     //is called when the label text is needed
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAt indexPath: IndexPath!) -> NSAttributedString!
     {
-        print(senderId)
+//        print(senderId)
+//        
+//        let message = messages[indexPath.item]
+//        print(message.senderId)
+//        print(message.senderDisplayName)
+//        if message.senderId == senderId {
+//            return nil
+//        } else {
+//            guard let senderDisplayName = message.senderDisplayName else {
+//                assertionFailure()
+//                return nil
+//            }
+//            return NSAttributedString(string: senderDisplayName)
+//            
+//        }
         
-        let message = messages[indexPath.item]
-        print(message.senderId)
-        print(message.senderDisplayName)
-        if message.senderId == senderId {
-            return nil
-        } else {
-            guard let senderDisplayName = message.senderDisplayName else {
-                assertionFailure()
-                return nil
-            }
-            return NSAttributedString(string: senderDisplayName)
-            
-        }
-        
-        //return messages[indexPath.item].senderId == senderId ? nil : NSAttributedString(string: messages[indexPath.item].senderDisplayName)
+        return messages[indexPath.item].senderId == senderId ? nil : NSAttributedString(string: messages[indexPath.item].senderDisplayName)
     }
     
     //is called when the height of the top label is needed
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) -> CGFloat
     {
-        let message = messages[indexPath.item]
+//        let message = messages[indexPath.item]
+//        
+//        if message.senderId == senderId {
+//            return 0.0
+//        } else {
+//            
+//            return 17.0
+//            
+//        }
         
-        if message.senderId == senderId {
-            return 0.0
-        } else {
-            
-            return 17.0
-            
-        }
-        
-        //return messages[indexPath.item].senderId == senderId ? 0 : 15
+        return messages[indexPath.item].senderId == senderId ? 0 : 15
     }
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!)
@@ -199,57 +201,48 @@ class ChatViewController: JSQMessagesViewController {
         return UINib(nibName: String(describing: self), bundle: nil)
     }
     
+    func addNavBar() {
+        //https://stackoverflow.com/questions/39566793/navigation-bar-with-jsqmessages
+        let navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height:54)) // Offset by 20 pixels vertically to take the status bar into account
+        
+        navigationBar.barTintColor = UIColor.black
+        navigationBar.tintColor = UIColor.white
+        
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        
+        // Create a navigation item with a title
+        let navigationItem = UINavigationItem()
+        navigationItem.title = "Birthday Girl!"
+        
+        // Create left and right button for navigation item
+        let leftButton =  UIBarButtonItem(title: "Sign out", style:   .plain, target: self, action: #selector(btn_clicked(_:)))
+        
+//        let rightButton = UIBarButtonItem(title: "Sign Out", style: .plain, target: self, action: nil)
+        
+        // Create two buttons for the navigation item
+        navigationItem.leftBarButtonItem = leftButton
+//        navigationItem.rightBarButtonItem = rightButton
+        
+        // Assign the navigation item to the navigation bar
+        navigationBar.items = [navigationItem]
+        
+        // Make the navigation bar a subview of the current view controller
+        self.view.addSubview(navigationBar)
+    }
     
+    func btn_clicked(_ sender: UIBarButtonItem) {
+        //https://stackoverflow.com/questions/37936560/how-to-sign-out-of-google-after-being-authenticated
+        // Do something
+        messages = [JSQMessage]()
+        GIDSignIn.sharedInstance().signOut()
+        performSegue(withIdentifier: "back", sender: self)
+    }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        print("In ChatViewController")
-//        print(welcome)
-//        welcomeMessage.text = welcome
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-//
-//    //MARK: Actions
-//
-//    @IBAction func viewTasks(_ sender: Any) {
-//        welcomeMessage.text = "Todo is typing..."
-//
-//        let json = ["message": "view"]
-//        do {
-//
-//            let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
-//            let url = NSURL(string: "http://127.0.0.1:3000/chat")!
-//            let request = NSMutableURLRequest(url: url as URL)
-//            request.httpMethod = "POST"
-//
-//            request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-//            request.setValue(uuid, forHTTPHeaderField: "Authorization")
-//            request.httpBody = jsonData
-//
-//            let task = URLSession.shared.dataTask(with: request as URLRequest){ data, response, error in
-//                if error != nil {
-//                    print("Error! -> \(String(describing: error))")
-//                    return
-//                }
-//                DispatchQueue.main.async(){
-//                do {
-//                    let result = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String:AnyObject]
-//                    print("Result -> \(String(describing: result))")
-//                     self.welcomeMessage.text  = (result!["message"] as? String)!
-//                } catch {
-//                    print("Error -> \(error)")
-//                }
-//            }
-//            }
-//            task.resume()
-//        } catch {
-//            print(error)
-//        }
-//
-//    }
+    func sign(_ signIn: GIDSignIn!, didSignInFor user:GIDGoogleUser!,
+              withError error: Error!)
+    {
+        // Perform any operations when the user disconnects from app here.
+    }
     
 }
 

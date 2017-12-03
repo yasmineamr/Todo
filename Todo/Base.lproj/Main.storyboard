@@ -26,12 +26,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="19F-di-xGT">
-                                <rect key="frame" x="67" y="88" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="signInButton" destination="zqQ-nZ-reT" id="xSw-qC-bSn"/>
@@ -80,11 +76,12 @@
                         <outlet property="view" destination="9Il-WV-Vxm" id="yhZ-nr-574"/>
                         <outlet property="viewButton" destination="9Il-WV-Vxm" id="Zs1-Rb-rxL"/>
                         <outlet property="welcomeMessage" destination="a9I-E3-osa" id="CCx-Fh-F83"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="back" id="JQE-mF-Khb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8D1-1t-Ze5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="925.60000000000002" y="116.49175412293854"/>
+            <point key="canvasLocation" x="1058" y="117"/>
         </scene>
     </scenes>
 </document>

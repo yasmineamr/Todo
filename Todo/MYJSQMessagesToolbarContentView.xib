@@ -39,7 +39,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmO-ba-V57">
-                    <rect key="frame" x="14" y="20" width="34" height="30"/>
+                    <rect key="frame" x="8" y="11" width="34" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="View"/>
                     <connections>
@@ -47,33 +47,39 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKL-Kw-5qt">
-                    <rect key="frame" x="62" y="20" width="67" height="30"/>
+                    <rect key="frame" x="62" y="11" width="67" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Complete"/>
                     <connections>
                         <action selector="completeTask:" destination="1" eventType="touchUpInside" id="uaP-YV-ts3"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5S-sT-1Yf">
-                    <rect key="frame" x="198" y="20" width="51" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Update"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="we4-ne-Ifg">
-                    <rect key="frame" x="283" y="20" width="46" height="30"/>
+                    <rect key="frame" x="283" y="11" width="46" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Create"/>
+                    <connections>
+                        <action selector="createTask:" destination="1" eventType="touchUpInside" id="J2z-lW-F0v"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWx-1n-P73">
-                    <rect key="frame" x="137" y="20" width="45" height="30"/>
+                    <rect key="frame" x="144" y="11" width="45" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Delete"/>
                     <connections>
                         <action selector="deleteTask:" destination="1" eventType="touchUpInside" id="lPq-hH-7k7"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jW7-lO-Foa">
+                    <rect key="frame" x="206" y="11" width="51" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Update"/>
+                    <connections>
+                        <action selector="updateTask:" destination="1" eventType="touchUpInside" id="APC-3n-3Ml"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.4703131138402844" green="0.983910825485111" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Myo-1S-Vg1" firstAttribute="leading" secondItem="dm4-NT-mvr" secondAttribute="trailing" constant="8" id="7Ld-5r-Hp3"/>
                 <constraint firstItem="dm4-NT-mvr" firstAttribute="top" secondItem="1" secondAttribute="centerY" constant="7" id="9Tz-Wq-xIf"/>
@@ -88,6 +94,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="completeButton" destination="nKL-Kw-5qt" id="MKa-Sh-sSz"/>
+                <outlet property="createButton" destination="we4-ne-Ifg" id="cbS-Vh-2wK"/>
                 <outlet property="deleteButton" destination="JWx-1n-P73" id="ckY-sb-EcZ"/>
                 <outlet property="leftBarButtonContainerView" destination="LEq-G7-jGt" id="F0V-4N-1Mo"/>
                 <outlet property="leftBarButtonContainerViewWidthConstraint" destination="eMy-Af-wwH" id="FI9-F2-2bN"/>
@@ -96,6 +103,7 @@
                 <outlet property="rightBarButtonContainerViewWidthConstraint" destination="yde-S9-dHe" id="WGu-df-M3L"/>
                 <outlet property="rightHorizontalSpacingConstraint" destination="ds6-61-GNv" id="ZQh-8M-QFs"/>
                 <outlet property="textView" destination="dm4-NT-mvr" id="PFw-HO-oT8"/>
+                <outlet property="updateButton" destination="jW7-lO-Foa" id="Kxj-Ob-Rz6"/>
                 <outlet property="viewButton" destination="pmO-ba-V57" id="JVi-qF-zPs"/>
             </connections>
             <point key="canvasLocation" x="280.5" y="587"/>
