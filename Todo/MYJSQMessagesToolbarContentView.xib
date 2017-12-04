@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,8 +24,8 @@
                         <constraint firstAttribute="width" constant="34" id="eMy-Af-wwH"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Myo-1S-Vg1" userLabel="Right button container">
-                    <rect key="frame" x="287" y="84" width="50" height="32"/>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Myo-1S-Vg1" userLabel="Right button container">
+                    <rect key="frame" x="279" y="76" width="50" height="32"/>
                     <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="32" id="NaR-re-dJ4"/>
@@ -38,41 +38,36 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmO-ba-V57">
-                    <rect key="frame" x="8" y="11" width="34" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmO-ba-V57">
+                    <rect key="frame" x="15" y="12" width="34" height="30"/>
                     <state key="normal" title="View"/>
                     <connections>
                         <action selector="viewTasks:" destination="1" eventType="touchUpInside" id="Y1l-LF-TfE"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKL-Kw-5qt">
-                    <rect key="frame" x="62" y="11" width="67" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKL-Kw-5qt">
+                    <rect key="frame" x="64" y="12" width="67" height="30"/>
                     <state key="normal" title="Complete"/>
                     <connections>
                         <action selector="completeTask:" destination="1" eventType="touchUpInside" id="uaP-YV-ts3"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="we4-ne-Ifg">
-                    <rect key="frame" x="283" y="11" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="we4-ne-Ifg">
+                    <rect key="frame" x="272" y="12" width="46" height="30"/>
                     <state key="normal" title="Create"/>
                     <connections>
                         <action selector="createTask:" destination="1" eventType="touchUpInside" id="J2z-lW-F0v"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWx-1n-P73">
-                    <rect key="frame" x="144" y="11" width="45" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWx-1n-P73">
+                    <rect key="frame" x="146" y="12" width="45" height="30"/>
                     <state key="normal" title="Delete"/>
                     <connections>
                         <action selector="deleteTask:" destination="1" eventType="touchUpInside" id="lPq-hH-7k7"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jW7-lO-Foa">
-                    <rect key="frame" x="206" y="11" width="51" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jW7-lO-Foa">
+                    <rect key="frame" x="206" y="12" width="51" height="30"/>
                     <state key="normal" title="Update"/>
                     <connections>
                         <action selector="updateTask:" destination="1" eventType="touchUpInside" id="APC-3n-3Ml"/>
@@ -81,12 +76,22 @@
             </subviews>
             <color key="backgroundColor" red="0.4703131138402844" green="0.983910825485111" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="JWx-1n-P73" firstAttribute="leading" secondItem="nKL-Kw-5qt" secondAttribute="trailing" constant="15" id="3Pp-Oj-Nnu"/>
+                <constraint firstItem="nKL-Kw-5qt" firstAttribute="top" secondItem="1" secondAttribute="top" constant="12" id="3xN-52-QMQ"/>
                 <constraint firstItem="Myo-1S-Vg1" firstAttribute="leading" secondItem="dm4-NT-mvr" secondAttribute="trailing" constant="8" id="7Ld-5r-Hp3"/>
                 <constraint firstItem="dm4-NT-mvr" firstAttribute="top" secondItem="1" secondAttribute="centerY" constant="7" id="9Tz-Wq-xIf"/>
                 <constraint firstAttribute="bottom" secondItem="dm4-NT-mvr" secondAttribute="bottom" constant="7" id="CCb-V7-yek"/>
+                <constraint firstItem="nKL-Kw-5qt" firstAttribute="leading" secondItem="pmO-ba-V57" secondAttribute="trailing" constant="15" id="CCq-EY-EN4"/>
+                <constraint firstItem="jW7-lO-Foa" firstAttribute="top" secondItem="1" secondAttribute="top" constant="12" id="DGO-zF-zqS"/>
                 <constraint firstAttribute="bottom" secondItem="Myo-1S-Vg1" secondAttribute="bottom" constant="6" id="EaS-Oq-Qp5"/>
+                <constraint firstItem="jW7-lO-Foa" firstAttribute="leading" secondItem="JWx-1n-P73" secondAttribute="trailing" constant="15" id="Gbm-Qj-vN3"/>
+                <constraint firstItem="we4-ne-Ifg" firstAttribute="top" secondItem="1" secondAttribute="top" constant="12" id="IJf-9j-QYf"/>
+                <constraint firstItem="pmO-ba-V57" firstAttribute="top" secondItem="1" secondAttribute="top" constant="12" id="IWK-22-oZJ"/>
                 <constraint firstItem="LEq-G7-jGt" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="8" id="LAU-fo-GJJ"/>
+                <constraint firstItem="pmO-ba-V57" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="15" id="PgU-47-NPU"/>
                 <constraint firstAttribute="trailing" secondItem="Myo-1S-Vg1" secondAttribute="trailing" constant="8" id="ds6-61-GNv"/>
+                <constraint firstItem="JWx-1n-P73" firstAttribute="top" secondItem="1" secondAttribute="top" constant="12" id="kjX-WD-Edm"/>
+                <constraint firstItem="we4-ne-Ifg" firstAttribute="leading" secondItem="jW7-lO-Foa" secondAttribute="trailing" constant="15" id="nBb-St-IXc"/>
                 <constraint firstAttribute="bottom" secondItem="LEq-G7-jGt" secondAttribute="bottom" constant="6" id="oG2-YD-ZZI"/>
                 <constraint firstItem="dm4-NT-mvr" firstAttribute="leading" secondItem="LEq-G7-jGt" secondAttribute="trailing" constant="8" id="owo-gB-gyR"/>
             </constraints>
@@ -109,9 +114,4 @@
             <point key="canvasLocation" x="280.5" y="587"/>
         </view>
     </objects>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>

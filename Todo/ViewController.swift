@@ -15,6 +15,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         let objObjectiveCFile = Todo()
         objObjectiveCFile.displayMessageFromCreatedObjectiveCFile()
         
+        signInButton.translatesAutoresizingMaskIntoConstraints = false
+        signInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        signInButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().clientID = "349558669094-s6k8ll3co24e64j0v7avdq961ejjm84s.apps.googleusercontent.com"

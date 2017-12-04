@@ -49,6 +49,7 @@ class MYJSQMessagesToolbarContentView: JSQMessagesToolbarContentView {
             messages.append(message)
             
             myCvc().finishReceivingMessage()
+            JSQSystemSoundPlayer.jsq_playMessageSentSound()
         }
         myCvc().finishSendingMessage()
         
@@ -82,6 +83,7 @@ class MYJSQMessagesToolbarContentView: JSQMessagesToolbarContentView {
                     {
                         messages.append(message)
                         self.myCvc().finishReceivingMessage()
+                        JSQSystemSoundPlayer.jsq_playMessageReceivedSound()
                         print("in view again")
                     }
                     
@@ -104,8 +106,8 @@ class MYJSQMessagesToolbarContentView: JSQMessagesToolbarContentView {
         if let message = JSQMessage(senderId: uuid, displayName: "Habiiba", text: "Delete task")
         {
             messages.append(message)
-            
             myCvc().finishReceivingMessage()
+            JSQSystemSoundPlayer.jsq_playMessageSentSound()
         }
         myCvc().finishSendingMessage()
         
@@ -114,6 +116,7 @@ class MYJSQMessagesToolbarContentView: JSQMessagesToolbarContentView {
             messages.append(message)
             
             myCvc().finishReceivingMessage()
+            JSQSystemSoundPlayer.jsq_playMessageReceivedSound()
         }
         myCvc().finishSendingMessage()
     }
@@ -126,6 +129,7 @@ class MYJSQMessagesToolbarContentView: JSQMessagesToolbarContentView {
             messages.append(message)
             
             myCvc().finishReceivingMessage()
+            JSQSystemSoundPlayer.jsq_playMessageSentSound()
         }
         myCvc().finishSendingMessage()
         
@@ -134,6 +138,7 @@ class MYJSQMessagesToolbarContentView: JSQMessagesToolbarContentView {
             messages.append(message)
             
             myCvc().finishReceivingMessage()
+            JSQSystemSoundPlayer.jsq_playMessageReceivedSound()
         }
     }
     
@@ -169,6 +174,7 @@ class MYJSQMessagesToolbarContentView: JSQMessagesToolbarContentView {
                 messages.append(task)
                 
                 self.myCvc().finishReceivingMessage()
+                JSQSystemSoundPlayer.jsq_playMessageSentSound()
             }
             self.myCvc().finishSendingMessage()
             
@@ -200,6 +206,7 @@ class MYJSQMessagesToolbarContentView: JSQMessagesToolbarContentView {
                         {
                             messages.append(message)
                             self.myCvc().finishReceivingMessage()
+                            JSQSystemSoundPlayer.jsq_playMessageReceivedSound()
                         }
                         
                     } catch {
@@ -289,6 +296,7 @@ class MYJSQMessagesToolbarContentView: JSQMessagesToolbarContentView {
                 messages.append(task)
                 
                 self.myCvc().finishReceivingMessage()
+                JSQSystemSoundPlayer.jsq_playMessageSentSound()
             }
             self.myCvc().finishSendingMessage()
             
@@ -321,6 +329,7 @@ class MYJSQMessagesToolbarContentView: JSQMessagesToolbarContentView {
                         {
                             messages.append(message)
                             self.myCvc().finishReceivingMessage()
+                            JSQSystemSoundPlayer.jsq_playMessageReceivedSound()
                         }
                         
                     } catch {

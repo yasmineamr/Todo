@@ -40,8 +40,8 @@ class ChatViewController: JSQMessagesViewController, GIDSignInUIDelegate, GIDSig
         if let message = JSQMessage(senderId: "1", displayName: "Todo", text: welcome)
         {
             messages.append(message)
-            
             self.finishReceivingMessage()
+            JSQSystemSoundPlayer.jsq_playMessageReceivedSound()
         }
     }
     
@@ -85,6 +85,7 @@ class ChatViewController: JSQMessagesViewController, GIDSignInUIDelegate, GIDSig
             messages.append(message)
             
             self.finishReceivingMessage()
+            JSQSystemSoundPlayer.jsq_playMessageSentSound()
             finishSendingMessage()
             
             if completeFlag == 1{
@@ -118,6 +119,7 @@ class ChatViewController: JSQMessagesViewController, GIDSignInUIDelegate, GIDSig
                             {
                                 messages.append(message)
                                 self.finishReceivingMessage()
+                                JSQSystemSoundPlayer.jsq_playMessageReceivedSound()
                             }
                             self.finishSendingMessage()
                             
@@ -162,6 +164,7 @@ class ChatViewController: JSQMessagesViewController, GIDSignInUIDelegate, GIDSig
                             {
                                 messages.append(message)
                                 self.finishReceivingMessage()
+                                JSQSystemSoundPlayer.jsq_playMessageReceivedSound()
                             }
                             self.finishSendingMessage()
                             
@@ -206,6 +209,7 @@ class ChatViewController: JSQMessagesViewController, GIDSignInUIDelegate, GIDSig
                             {
                                 messages.append(message)
                                 self.finishReceivingMessage()
+                                JSQSystemSoundPlayer.jsq_playMessageReceivedSound()
                             }
                             self.finishSendingMessage()
                             
@@ -229,13 +233,9 @@ class ChatViewController: JSQMessagesViewController, GIDSignInUIDelegate, GIDSig
             messages.append(message)
             
             self.finishReceivingMessage()
+            JSQSystemSoundPlayer.jsq_playMessageReceivedSound()
         }
         finishSendingMessage()
-    }
-    
-    func makeConversation() -> [JSQMessage] {
-        // This is just for demo purposes, if you add more messages to this array they will appear in your conversation feed.
-        return [JSQMessage(senderId: "053496-4509-288", displayName: "Dan leonard", text: "Check out this awesome library called JSQMessagesViewController")]
     }
     
     override class func nib() -> UINib! {
@@ -244,7 +244,7 @@ class ChatViewController: JSQMessagesViewController, GIDSignInUIDelegate, GIDSig
     
     func addNavBar() {
         // https://stackoverflow.com/questions/39566793/navigation-bar-with-jsqmessages
-        let navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 667, height:54)) // Offset by 20 pixels vertically to take the status bar into account
+        let navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 2000, height:54)) // Offset by 20 pixels vertically to take the status bar into account
         print(view.frame.size.width)
         
         //        [[UINavigationBar, appearance], setAutoresizingMask,:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin];
