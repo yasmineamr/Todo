@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,18 +18,24 @@
                         <viewControllerLayoutGuide type="bottom" id="Tm0-ON-OEo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zqQ-nZ-reT" customClass="GIDSignInButton">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zqQ-nZ-reT" customClass="GIDSignInButton">
                                 <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="todo-bubble-small" translatesAutoresizingMaskIntoConstraints="NO" id="ZEo-ix-kiC">
+                                <rect key="frame" x="67" y="76" width="240" height="185"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93533247709274292" green="0.26533383131027222" blue="0.35296225547790527" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zqQ-nZ-reT" firstAttribute="top" secondItem="ZEo-ix-kiC" secondAttribute="bottom" constant="30" id="TES-oz-maj"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="logo" destination="ZEo-ix-kiC" id="rH9-KQ-uXk"/>
                         <outlet property="signInButton" destination="zqQ-nZ-reT" id="xSw-qC-bSn"/>
                         <segue destination="dcg-zr-T7h" kind="show" identifier="segue" id="0Yc-Al-zkW"/>
                     </connections>
@@ -47,7 +53,7 @@
                         <viewControllerLayoutGuide type="bottom" id="RTf-bo-yZY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Jo7-Ey-Jn5">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9I-E3-osa">
@@ -84,4 +90,7 @@
             <point key="canvasLocation" x="1058" y="117"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="todo-bubble-small" width="180" height="144"/>
+    </resources>
 </document>

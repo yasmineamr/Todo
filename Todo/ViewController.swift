@@ -8,6 +8,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
 
     @IBOutlet weak var signInButton: GIDSignInButton!
     
+    @IBOutlet weak var logo: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         signInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         signInButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        logo.translatesAutoresizingMaskIntoConstraints = false
+        logo.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+
         
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().delegate = self

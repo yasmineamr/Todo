@@ -45,7 +45,6 @@
 		E393974E1FCCA64F00AE055B /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E393974B1FCCA64F00AE055B /* GoogleSignIn.bundle */; };
 		E39397551FCCA6CC00AE055B /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = E39397541FCCA6CC00AE055B /* Todo.m */; };
 		E3A713651FCDF113007B301B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A713641FCDF113007B301B /* ChatViewController.swift */; };
-		E3DABB4C1FCF058D00149441 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DABB4B1FCF058D00149441 /* ButtonsViewController.swift */; };
 		E3FBCA671FCF505200280C9C /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3FBCA661FCF505200280C9C /* ChatViewController.xib */; };
 		E3FBCA6C1FCF55D800280C9C /* MYJSQMessagesToolbarContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3FBCA691FCF55D700280C9C /* MYJSQMessagesToolbarContentView.xib */; };
 		E3FBCA6D1FCF55D800280C9C /* MYJSQMessagesInputToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FBCA6A1FCF55D700280C9C /* MYJSQMessagesInputToolbar.swift */; };
@@ -123,7 +122,6 @@
 		E39397541FCCA6CC00AE055B /* Todo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
 		E39397561FCCA6DE00AE055B /* Todo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
 		E3A713641FCDF113007B301B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		E3DABB4B1FCF058D00149441 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		E3FBCA661FCF505200280C9C /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		E3FBCA691FCF55D700280C9C /* MYJSQMessagesToolbarContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MYJSQMessagesToolbarContentView.xib; sourceTree = "<group>"; };
 		E3FBCA6A1FCF55D700280C9C /* MYJSQMessagesInputToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MYJSQMessagesInputToolbar.swift; sourceTree = "<group>"; };
@@ -237,7 +235,6 @@
 				E3FBCA6A1FCF55D700280C9C /* MYJSQMessagesInputToolbar.swift */,
 				E3FBCA6B1FCF55D700280C9C /* MYJSQMessagesToolbarContentView.swift */,
 				E3FBCA691FCF55D700280C9C /* MYJSQMessagesToolbarContentView.xib */,
-				E3DABB4B1FCF058D00149441 /* ButtonsViewController.swift */,
 				E393971D1FCCA50C00AE055B /* Main.storyboard */,
 				E39397221FCCA50C00AE055B /* LaunchScreen.storyboard */,
 				E39397251FCCA50C00AE055B /* Info.plist */,
@@ -505,7 +502,6 @@
 				E393971C1FCCA50C00AE055B /* ViewController.swift in Sources */,
 				E3FBCA6E1FCF55D800280C9C /* MYJSQMessagesToolbarContentView.swift in Sources */,
 				E39397551FCCA6CC00AE055B /* Todo.m in Sources */,
-				E3DABB4C1FCF058D00149441 /* ButtonsViewController.swift in Sources */,
 				E3A713651FCDF113007B301B /* ChatViewController.swift in Sources */,
 				E393971A1FCCA50C00AE055B /* AppDelegate.swift in Sources */,
 				E3FBCA6D1FCF55D800280C9C /* MYJSQMessagesInputToolbar.swift in Sources */,
@@ -685,7 +681,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Todo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.guc.Todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -709,7 +705,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Todo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.guc.Todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

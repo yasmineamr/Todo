@@ -264,7 +264,6 @@ class ChatViewController: JSQMessagesViewController, GIDSignInUIDelegate, GIDSig
         
         // Create left and right button for navigation item
         let leftButton =  UIBarButtonItem(title: "Sign out", style:   .plain, target: self, action: #selector(btn_clicked(_:)))
-        
         // Create two buttons for the navigation item
         navigationItem.leftBarButtonItem = leftButton
         
